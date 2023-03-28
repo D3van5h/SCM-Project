@@ -29,11 +29,10 @@ def copyclipboard():
  
  
 Label(root, text="Strong Password Generator", font="Courier 30 bold").pack()
-Label(root, text="GeeksForGeeks", font="Courier 20 italic").pack()
-Label(root, text="Enter the number to get password").pack(pady=3)
+Label(root, text="Enter the length of your password").pack(pady=3)
 Entry(root, textvariable=passlen).pack(pady=3)
-Button(root, text="Tap to get",command=generate).pack(pady=7)
+Button(root, text="Get password",command=generate).pack(pady=7)
 Entry(root, textvariable=passwrd).pack(pady=3)
 
-Button(root, text="Tap to copy clipboard", command=copyclipboard).pack()
+Button(root, text="Copy to clipboard", command=copyclipboard).pack()
 root.mainloop()
