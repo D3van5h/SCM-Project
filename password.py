@@ -3,8 +3,7 @@ import pyperclip
 import random
 
 root = Tk()
-
-root.attributes("-fullscreen",True)
+root.geometry("1000x1000")
 root.title(" Random Password Generator")
 
 passwrd = StringVar()
@@ -34,9 +33,11 @@ Label(root, text="").pack()
 Label(root, text="").pack()
 Label(root, text="").pack()
 Label(root, text="Enter the length of your password",font="Courier 35 italic").pack(pady=3)
+Label(root, text="").pack()
 Entry(root, textvariable=passlen).pack(pady=3)
-Button(root, text="Get password",font="Courier 15 italic",command=generate,bg="light grey",borderwidth=5).pack(pady=7)
+Button(root, text="Get password",font="Courier 15 italic",command=generate,bg="light grey",borderwidth=3).pack(pady=7)
+Label(root, text="").pack()
 Entry(root, textvariable=passwrd).pack(pady=3)
-Button(root, text="Copy to clipboard",font="Courier 15 italic", command=copyclipboard,bg="light grey",borderwidth=5).pack()
+Button(root, text="Copy to clipboard",font="Courier 15 italic", command=copyclipboard,bg="light grey",borderwidth=3).pack()
 
 root.mainloop()
